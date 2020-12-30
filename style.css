@@ -1,4 +1,10 @@
-
+body{
+    padding: 0px !important;
+}
+.modal-open
+{
+    overflow-y: auto;
+}
 *
 {
     margin: 0;
@@ -7,9 +13,10 @@
 /*----------------navigation */
 #nav-bar
 {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 10;
+    
     
 }
 
@@ -61,7 +68,7 @@
 
 .carousel-caption
 {
-    top:60%;
+    top:40%;
     padding-right: 300px;
     transform: translateY(-50%);
     bottom: initial!important;
@@ -71,7 +78,7 @@
 .carousel-caption h5
 {
     color:#fff;
-    font-size:24px;
+    font-size:30px;
 }
 
 
@@ -396,3 +403,48 @@ blockquote::before
 
     
 }
+
+/* -----get in touch------ */
+
+
+#contact
+{
+
+    background: #efefef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color:#777;
+
+}
+.contact-form
+{
+
+    padding:15px;
+
+}
+
+.form-control
+{
+    border-radius: 0 !important;
+    border:none ! important;
+
+}
+::placeholder
+{
+
+    color:#999!important;
+}
+.follow
+{
+    background:#fff;
+    padding: 10px;
+    margin: 15px;
+}
+
+
+.btn-1 {
+    background-color: #F27935;
+  }
+  .btn-1 .round {
+    background-color: #f59965;
+  }
