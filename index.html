@@ -5,31 +5,148 @@
     <link rel="stylesheet" href="style.css">
    <!-- CSS only -->
    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <!-- copy bootstrap js and past it here -->
 
     <!-- copy font awesome cdn -->
-</head>
+  
 
-<body>
+
+
+    
+<style>
+  /*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 320px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+       -o-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+          transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+  left: 0;
+}
+      
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+          transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+/* for chrome hidding scrollbar  */
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #EEEEEE;
+  background-color: #FAFAFA;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+/* body {
+/* background-color: black; */
+/* } */ */
+
+.demo {
+padding-top: 60px;
+padding-bottom: 110px;
+}
+
+.btn-demo {
+margin: 15px;
+padding: 10px 15px;
+border-radius: 0;
+font-size: 16px;
+background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+outline: 0;
+}
+
+.demo-footer {
+position: fixed;
+bottom: 0;
+width: 100%;
+padding: 15px;
+background-color: #212121;
+text-align: center;
+}
+
+.demo-footer > a {
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+color: #fff;
+}
+</style>
+</head>
+<body style="padding:0px !important;">
 
   
-<div class="">
+<div class="" >
+  
   <!-- <h1>MALABAR PLAZA GROUP OF HOTELS</h1> -->
 
     <!-- Make in the navigartion -->
   
-    <section id="nav-bar">
+    
+    <section id="nav-bar" >
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="icon1.png"></a>
+        <nav class="navbar navbar-expand-lg navbar-light" >
+            <a style=" position: sticky;" class="navbar-brand" href="#"><img src="icon1.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,21 +156,23 @@
                   <a class="nav-link" href="#">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">TARIFF</a>
+                  <a class="nav-link" href="Tariff.html">TARIFF</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">FACILITY</a>
+                  <a class="nav-link" href="Facilites.html">FACILITES</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">CONTACT US</a>
                 </li>
               
-                <li class="nav-item">
+                <li class="nav-item" style="display: none;">
                   <a class="nav-link" href="#more_details" onclick="display_more_details()">MORE DETAILS</a>
                 </li>
               </ul>
             </div>
           </nav>
+
+          
     </section>
 
 
@@ -63,33 +182,53 @@
 
     <!-- -------------slider------------------ -->
 
+<div class="row">
+
 
     <div id="slider">
+      
+ 
       <div id="headerSlider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+            <!-- <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
             <li data-target="#headerSlider" data-slide-to="1"></li>
-            <li data-target="#headerSlider" data-slide-to="2"></li>
+            <li data-target="#headerSlider" data-slide-to="2"></li> -->
+            
         </ol>
+        
         <div class="carousel-inner">
+
             <div class="carousel-item active">
                 <img class="d-block img-fluid" src="a1.jpg" alt="First slide">
               <div class="carousel-caption">
-                <h5>CLASS HOTELS IN GOD'S OWN LAND KERALA,COCHIN</h5>
+                <h6 >CLASS HOTELS IN GOD'S OWN LAND KERALA,COCHIN</h6>
+                <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal2">
+                  <span class="txt">Hotels</span>
+                  <span class="round"><i class="fa fa-chevron-right"></i>
+              </button>
               </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid" src="a3.jpg" alt="Second slide">
            
                 <div class="carousel-caption">
-                  <h5>GOOD FOOD AND GOOD LIFE</h5>
+                  <h6>GOOD FOOD AND GOOD LIFE</h6>
+                  <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal2">
+                    <span class="txt">Hotels</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i>
+                </button>
                 </div>
               </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid" src="slider3.jpg" alt="Third slide">
                 <div class="carousel-caption">
-                  <h5>FOOD IS LOVE.LOVE IS FOOD IT'S ALL GOOD</h5>
+                  <h6>FOOD IS LOVE.LOVE IS FOOD IT'S ALL GOOD</h6>
+                  <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal2">
+                    <span class="txt">Hotels</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i>
+                </button>
                 </div>
+                
               </div>
         </div>
         <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
@@ -101,7 +240,64 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+  
+
+
     </div>
+
+  <!-- <div class="col-md-4 " style="margin-top: 8px;">
+   
+    <ul class="list-group">
+      <li class="mb-2  box list-group-item d-flex justify-content-between align-items-center" >
+      <a href="Tariff.html">  <h5 style="color: black;">Malabar Plaza Residency, Kakkanad, Ernakulam </h5> 
+      </a><div class="image-parent">
+            <img style="width: 80px; height: 80px;" src="https://blog.qr4.nl/image.axd?picture=2011%2F8%2FPostscript-Vector-QR-Code.jpg" class="img-fluid" alt="quixote">
+        </div>
+      </li>
+      <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">
+        <h5 style="color: black;">Ritzy Village Residency, SRM Road, Ernakulam</h5>
+        <div class="image-parent">
+          <img style="width: 80px; height: 80px;" src="https://blog.qr4.nl/image.axd?picture=2011%2F8%2FPostscript-Vector-QR-Code.jpg" class="img-fluid" alt="quixote">
+      </div>
+      </li>
+      <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+        <h5 style="color: black;"> Fort Malabar, SRM Road, Ernakulam</h5>
+        <div class="image-parent">
+          <img style="width: 80px; height: 80px;" src="https://blog.qr4.nl/image.axd?picture=2011%2F8%2FPostscript-Vector-QR-Code.jpg" class="img-fluid" alt="quixote">
+      </div>
+      </li>
+
+
+
+
+      <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+        <h5 style="color: black;">  Hotel Malabar Plaza INN, Srm Road , Ernakulam</h5>
+        <div class="image-parent">
+          <img style="width: 80px; height: 80px;" src="https://blog.qr4.nl/image.axd?picture=2011%2F8%2FPostscript-Vector-QR-Code.jpg" class="img-fluid" alt="quixote">
+      </div>
+      </li>
+
+
+
+
+      <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+        <h5 style="color: black;"> Century Lodge, SRM Road , Ernakulam</h5>
+        <div class="image-parent">
+          <img style="width: 80px; height: 80px;" src="https://blog.qr4.nl/image.axd?picture=2011%2F8%2FPostscript-Vector-QR-Code.jpg" class="img-fluid" alt="quixote">
+      </div>
+      </li>
+     
+    </ul>
+    
+
+    <a href="ViewHotel.html" class="btn btn-primary">View More</a>
+    
+  </div> -->
+  
+   
+  </div>
+
 
 
     <!-- ------about------ -->
@@ -421,7 +617,7 @@ We also have a unique series of retail outlets called “The Mask”, with store
         <p class="text-center">In publishing and graphic design, Lorem ipsum is a placeholder text commonly.</p>
       <div class="row">
 
-        <div class="col-md-4 text-center">
+        <div class="col-md-4  text-center">
 
           <div class="profile">
             <img src="https://wallpapercave.com/wp/wp5567015.jpg"  class="user">
@@ -434,7 +630,7 @@ We also have a unique series of retail outlets called “The Mask”, with store
             
           </div>
         </div> 
-        <div class="col-md-4 text-center">
+        <div class="col-md-4  text-center">
 
           <div class="profile">
             <img src="https://wallpaperaccess.com/full/1403118.jpg"  class="user">
@@ -493,19 +689,19 @@ We also have a unique series of retail outlets called “The Mask”, with store
          
   
           <div class="row ">
-            <div class="col-sm-6 col-6 col-md-3 profile-pic text-center">
+            <div class="col-sm-12 col-6 col-md-3 profile-pic text-center">
              
-              <div class="card" style="width: 12rem; height: 292px;">
-                <img style="height: 180px;" src="https://media-cdn.tripadvisor.com/media/photo-s/1a/99/04/66/oyo-26253-malabar-plaza.jpg" class="card-img-top" alt="...">
+              <div class="card" style="width: 13rem; height: 292px;">
+                <img  src="https://media-cdn.tripadvisor.com/media/photo-s/1a/99/04/66/oyo-26253-malabar-plaza.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h6 class="text-dark">MALABAR PLAZA RESIDENCY KAKKANAD ERNAKULAM</h3>
                 </div>
               </div>
             </div>
   
-            <div class="col-sm-6 col-6 col-md-3 profile-pic text-center">
-              <div class="card" style="width: 12rem; height: 292px;">
-                <img style="height: 180px;" src="https://images.oyoroomscdn.com/uploads/hotel_image/14607/3fd7328238674fd7.jpg" class="card-img-top" alt="...">
+            <div class="col-sm-12 col-6 col-md-3 profile-pic text-center">
+              <div class="card" style="width: 13rem; height: 292px;">
+                <img  src="https://images.oyoroomscdn.com/uploads/hotel_image/14607/3fd7328238674fd7.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h6 class="text-dark">MALABAR PLAZA HOTEL TOURIST HOME VAZHAKKALA </h6>
                 </div>
@@ -661,15 +857,137 @@ We also have a unique series of retail outlets called “The Mask”, with store
 
 
         </div>
+        </div>
       </section>
     </div>
+
+
+
+
+
+
+
 </div>
 <script>
   function display_more_details(){
     let p = document.getElementById('more_details');
     p.removeAttribute("hidden");
   }
+
+  document.getElementsByTagName('body')[0].onscroll = function() {
+    console.log("scrolling");
+};
 </script>
+
+<section id="contact">
+
+  <div class="container">
+    <h1>Get in Touch</h1>
+
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Name">
+
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Phone no.">
+            
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email id">
+            
+          </div>
+          <div class="form-group">
+            <textarea  class="form-control" row="4" placeholder="Your Message">
+              </textarea>
+            
+          </div>
+
+          <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+        </form>
+      </div>
+      <div class="col-md-6 contact-info">
+        <div class="follow"><b>Address:</b><i class="fa fa-map-marker" ></i>XYZ Road,Ernakulam,IN</div>
+        <div class="follow"><b>Phone:</b><i class="fa fa-map-marker" ></i>XYZ Road,Ernakulam,IN</div>
+        <div class="follow"><b>Address:</b><i class="fa fa-map-marker" ></i>XYZ Road,Ernakulam,IN</div>
+        <div class="follow"><b>Address:</b><i class="fa fa-map-marker" ></i>XYZ Road,Ernakulam,IN</div>
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+  <!-- Modal -->
+
+
+<!-- Modal -->
+<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+         
+            <div class="modal-header">
+              List Of Hotels
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              
+            </div>
+
+            <div class="modal-body">
+              <ul class="list-group">
+                <li class="mb-2  box list-group-item d-flex justify-content-between align-items-center" >
+                <a href="Tariff.html">  <h5 style="color: black;">Malabar Plaza Residency, Kakkanad, Ernakulam </h5> 
+                </a><div class="image-parent">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  </div>
+                </li>
+                <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">
+                  <h5 style="color: black;">Ritzy Village Residency, SRM Road, Ernakulam</h5>
+                  <div class="image-parent">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                </li>
+                <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+                  <h5 style="color: black;"> Fort Malabar, SRM Road, Ernakulam</h5>
+                  <div class="image-parent">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                </li>
+          
+          
+          
+          
+                <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+                  <h5 style="color: black;">  Hotel Malabar Plaza INN, Srm Road , Ernakulam</h5>
+                  <div class="image-parent">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                </li>
+          
+          
+          
+          
+                <li class="mb-2 gradient-border box list-group-item d-flex justify-content-between align-items-center">  
+                  <h5 style="color: black;"> Century Lodge, SRM Road , Ernakulam</h5>
+                  <div class="image-parent">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                </li>
+               
+              </ul>
+              
+          
+              <a href="ViewHotel.html" class="btn btn-primary">View More</a>
+            </div>
+
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div><!-- modal -->
+
 </body>
 
 </html>
